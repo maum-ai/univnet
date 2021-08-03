@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en-US">
+    <style>
+        table { 
+            border-collapse:collapse;
+            table-layout:fixed;
+            word-break:break-all; 
+        }  
+        th, td { 
+			border:0.5px solid grey;
+		}
+    </style>
+    <head>
+        <meta charset="UTF-8">
+        <title>Audio Samples from Unofficial Implementation of UnivNet vocoder</title>
+    </head>
+    <body>
+        <h2>Audio Samples from Unofficial Implementation of UnivNet vocoder</h2>
+        <div><p><b>Paper:</b> <a href="https://arxiv.org/abs/2106.07889"><i>Jang et al.</i>, UnivNet: A Neural Vocoder with Multi-Resolution Spectrogram Discriminators for High-Fidelity Waveform Generation</a></p></div>
+        <div><p><b>Implementation authors:</b> Kang-wook Kim, Wonbin Jung @<a href="https://maum.ai">MINDsLab Inc.</a></p></div>
+        <div><p><b>GitHub repository:</b> <a href="https://github.com/mindslab-ai/univnet">mindslab-ai/univnet</a>
+			<iframe src="https://ghbtns.com/github-btn.html?user=mindslab-ai&repo=univnet&type=star&count=true" frameborder="0" scrolling="0" width="150" height="20" title="GitHub"></iframe>
+		</p></div>
+        <p>Please check github repository for implementation details and checkpoint of pre-trained model.</p>
+		<p>Audio samples of our models will be uploaded after their trainings are finished.</p>
+        <br>
+        <h3>Synthesis for seen speakers</h3>
+        <li><b>LibriTTS/train-clean-360 dataset</b> is used to train and evaluate model.</li>
+        <li>Former five samples are same with sample in official demo page, later one sample is newly added.</li>
+        <br>
+        <table>
+			<colgroup>
+                <col width="16%">
+                <col width="14%">
+                <col width="14%">
+                <col width="14%">
+                <col width="14%">
+                <col width="14%">
+                <col width="14%">
+            </colgroup>
+            <thead>
+                <tr>
+                    <th rowspan="2">Text</th>
+                    <th colspan="5">Compared with official demo sample</th>
+                    <th colspan="1">Newly added</th>
+                </tr>
+                <tr>
+                    <td><p style="color:grey;"><i>Nobody could touch the body until the coroner came.</i></p></td>
+                    <td><p style="color:grey;"><i>Then they came to another grove of trees, where all the leaves were of gold; and afterwards to a third, where the leaves were all glittering diamonds.</i></p></td>
+                    <td><p style="color:grey;"><i>The shaven face of the priest is a further item to the same effect.</i></p></td>
+                    <td><p style="color:grey;"><i>The lady who had spoken English approached the table as if looking for something, and when Beaton looked again, the portrait had been turned on its face.</i></p></td>
+                    <td><p style="color:grey;"><i>He shouted, 'Where art thou, ring?' And the ring said, 'I am here,' though it was on the bed of the ocean.</i></p></td>
+                    <td><p style="color:grey;"><i>TBD</i></p></td>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td nowrap>GT</td>
+                    <td><div align="center"><audio controls="" style="width: 250px;"><source src="samples/seen/ground_truth/2004_147967_000029_000002.wav" type="audio/wav"></audio></div></td>
+                    <td><div align="center"><audio controls="" style="width: 250px;"><source src="samples/seen/ground_truth/337_126286_000008_000000.wav" type="audio/wav"></audio></div></td>
+                    <td><div align="center"><audio controls="" style="width: 250px;"><source src="samples/seen/ground_truth/3537_5704_000008_000005.wav" type="audio/wav"></audio></div></td>
+                    <td><div align="center"><audio controls="" style="width: 250px;"><source src="samples/seen/ground_truth/5319_84357_000005_000004.wav" type="audio/wav"></audio></div></td>
+                    <td><div align="center"><audio controls="" style="width: 250px;"><source src="samples/seen/ground_truth/6294_86679_000035_000004.wav" type="audio/wav"></audio></div></td>
+                    <td><div align="center"><audio controls="" style="width: 250px;"><source src="samples/seen/ground_truth/0.wav" type="audio/wav"></audio></div></td>
+                </tr>
+                <tr>
+                    <td nowrap>Official UnivNet-c16</td>
+                    <td><div align="center"><audio controls="" style="width: 250px;"><source src="samples/seen/official_c16/2004_147967_000029_000002.wav" type="audio/wav"></audio></div></td>
+                    <td><div align="center"><audio controls="" style="width: 250px;"><source src="samples/seen/official_c16/337_126286_000008_000000.wav" type="audio/wav"></audio></div></td>
+                    <td><div align="center"><audio controls="" style="width: 250px;"><source src="samples/seen/official_c16/3537_5704_000008_000005.wav" type="audio/wav"></audio></div></td>
+                    <td><div align="center"><audio controls="" style="width: 250px;"><source src="samples/seen/official_c16/5319_84357_000005_000004.wav" type="audio/wav"></audio></div></td>
+                    <td><div align="center"><audio controls="" style="width: 250px;"><source src="samples/seen/official_c16/6294_86679_000035_000004.wav" type="audio/wav"></audio></div></td>
+                    <td><div align="center">-</div></td>
+                </tr>
+                <tr>
+                    <td nowrap>Official UnivNet-c32</td>
+                    <td><div align="center"><audio controls="" style="width: 250px;"><source src="samples/seen/official_c32/2004_147967_000029_000002.wav" type="audio/wav"></audio></div></td>
+                    <td><div align="center"><audio controls="" style="width: 250px;"><source src="samples/seen/official_c32/337_126286_000008_000000.wav" type="audio/wav"></audio></div></td>
+                    <td><div align="center"><audio controls="" style="width: 250px;"><source src="samples/seen/official_c32/3537_5704_000008_000005.wav" type="audio/wav"></audio></div></td>
+                    <td><div align="center"><audio controls="" style="width: 250px;"><source src="samples/seen/official_c32/5319_84357_000005_000004.wav" type="audio/wav"></audio></div></td>
+                    <td><div align="center"><audio controls="" style="width: 250px;"><source src="samples/seen/official_c32/6294_86679_000035_000004.wav" type="audio/wav"></audio></div></td>
+                    <td><div align="center">-</div></td>
+                </tr>
+                <tr>
+                    <td nowrap><b>Our UnivNet-c32 (TBD)</b></td>
+                    <td><div align="center"><audio controls="" style="width: 250px;"><source src="samples/seen/c32/2004_147967_000029_000002.wav" type="audio/wav"></audio></div></td>
+                    <td><div align="center"><audio controls="" style="width: 250px;"><source src="samples/seen/c32/337_126286_000008_000000.wav" type="audio/wav"></audio></div></td>
+                    <td><div align="center"><audio controls="" style="width: 250px;"><source src="samples/seen/c32/3537_5704_000008_000005.wav" type="audio/wav"></audio></div></td>
+                    <td><div align="center"><audio controls="" style="width: 250px;"><source src="samples/seen/c32/5319_84357_000005_000004.wav" type="audio/wav"></audio></div></td>
+                    <td><div align="center"><audio controls="" style="width: 250px;"><source src="samples/seen/c32/6294_86679_000035_000004.wav" type="audio/wav"></audio></div></td>
+                    <td><div align="center"><audio controls="" style="width: 250px;"><source src="samples/seen/c32/0.wav" type="audio/wav"></audio></div></td>
+                </tr>
+            </tbody>
+        </table>
+        <br>
+        
+        <h3>Synthesis for unseen speakers</h3>
+        <li><b>LibriTTS/test-clean dataset</b> is used to evaluate model, not for training.</li>
+        <li>Former five samples are same with sample in official demo page, later one sample is newly added.</li>
+        <br>
+        <table>
+			<colgroup>
+                <col width="16%">
+                <col width="14%">
+                <col width="14%">
+                <col width="14%">
+                <col width="14%">
+                <col width="14%">
+                <col width="14%">
+            </colgroup>
+            <thead>
+                <tr>
+                    <th rowspan="2">Text</th>
+                    <th colspan="5">Compared with official demo sample</th>
+                    <th colspan="1">Newly added</th>
+                </tr>
+                <tr>
+                    <td><p style="color:grey;"><i>The stars began to crumble and a cloud of fine stardust fell through space.</i></p></td>
+                    <td><p style="color:grey;"><i>On August 27, 1837, she writes:--</i></p></td>
+                    <td><p style="color:grey;"><i>But when his big brother heard that he had refused to give his cap for a King's golden crown, he said that Anders was a stupid.</i></p></td>
+                    <td><p style="color:grey;"><i>The only thing is, I don't know anything about technique and stagecraft and the three unities and that sort of rot.</i></p></td>
+                    <td><p style="color:grey;"><i>The marquis of Worcester, a man past eighty-four, was the last in England that submitted to the authority of the parliament.</i></p></td>
+                    <td><p style="color:grey;"><i>TBD</i></p></td>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td nowrap>GT</td>
+                    <td><div align="center"><audio controls="" style="width: 250px;"><source src="samples/unseen/ground_truth/1089_134686_000007_000005.wav" type="audio/wav"></audio></div></td>
+                    <td><div align="center"><audio controls="" style="width: 250px;"><source src="samples/unseen/ground_truth/3575_170457_000037_000002.wav" type="audio/wav"></audio></div></td>
+                    <td><div align="center"><audio controls="" style="width: 250px;"><source src="samples/unseen/ground_truth/7021_85628_000037_000000.wav" type="audio/wav"></audio></div></td>
+                    <td><div align="center"><audio controls="" style="width: 250px;"><source src="samples/unseen/ground_truth/7176_92135_000006_000005.wav" type="audio/wav"></audio></div></td>
+                    <td><div align="center"><audio controls="" style="width: 250px;"><source src="samples/unseen/ground_truth/8224_274384_000016_000000.wav" type="audio/wav"></audio></div></td>
+                    <td><div align="center"><audio controls="" style="width: 250px;"><source src="samples/unseen/ground_truth/0.wav" type="audio/wav"></audio></div></td>
+                </tr>
+                <tr>
+                    <td nowrap>Official UnivNet-c16</td>
+                    <td><div align="center"><audio controls="" style="width: 250px;"><source src="samples/unseen/official_c16/1089_134686_000007_000005.wav" type="audio/wav"></audio></div></td>
+                    <td><div align="center"><audio controls="" style="width: 250px;"><source src="samples/unseen/official_c16/3575_170457_000037_000002.wav" type="audio/wav"></audio></div></td>
+                    <td><div align="center"><audio controls="" style="width: 250px;"><source src="samples/unseen/official_c16/7021_85628_000037_000000.wav" type="audio/wav"></audio></div></td>
+                    <td><div align="center"><audio controls="" style="width: 250px;"><source src="samples/unseen/official_c16/7176_92135_000006_000005.wav" type="audio/wav"></audio></div></td>
+                    <td><div align="center"><audio controls="" style="width: 250px;"><source src="samples/unseen/official_c16/8224_274384_000016_000000.wav" type="audio/wav"></audio></div></td>
+                    <td><div align="center">-</div></td>
+                </tr>
+                <tr>
+                    <td nowrap>Official UnivNet-c32</td>
+                    <td><div align="center"><audio controls="" style="width: 250px;"><source src="samples/unseen/official_c32/1089_134686_000007_000005.wav" type="audio/wav"></audio></div></td>
+                    <td><div align="center"><audio controls="" style="width: 250px;"><source src="samples/unseen/official_c32/3575_170457_000037_000002.wav" type="audio/wav"></audio></div></td>
+                    <td><div align="center"><audio controls="" style="width: 250px;"><source src="samples/unseen/official_c32/7021_85628_000037_000000.wav" type="audio/wav"></audio></div></td>
+                    <td><div align="center"><audio controls="" style="width: 250px;"><source src="samples/unseen/official_c32/7176_92135_000006_000005.wav" type="audio/wav"></audio></div></td>
+                    <td><div align="center"><audio controls="" style="width: 250px;"><source src="samples/unseen/official_c32/8224_274384_000016_000000.wav" type="audio/wav"></audio></div></td>
+                    <td><div align="center">-</div></td>
+                </tr>
+                <tr>
+                    <td nowrap><b>Our UnivNet-c32 (TBD)</b></td>
+                    <td><div align="center"><audio controls="" style="width: 250px;"><source src="samples/unseen/c32/1089_134686_000007_000005.wav" type="audio/wav"></audio></div></td>
+                    <td><div align="center"><audio controls="" style="width: 250px;"><source src="samples/unseen/c32/3575_170457_000037_000002.wav" type="audio/wav"></audio></div></td>
+                    <td><div align="center"><audio controls="" style="width: 250px;"><source src="samples/unseen/c32/7021_85628_000037_000000.wav" type="audio/wav"></audio></div></td>
+                    <td><div align="center"><audio controls="" style="width: 250px;"><source src="samples/unseen/c32/7176_92135_000006_000005.wav" type="audio/wav"></audio></div></td>
+                    <td><div align="center"><audio controls="" style="width: 250px;"><source src="samples/unseen/c32/8224_274384_000016_000000.wav" type="audio/wav"></audio></div></td>
+                    <td><div align="center"><audio controls="" style="width: 250px;"><source src="samples/unseen/c32/0.wav" type="audio/wav"></audio></div></td>
+                </tr>
+            </tbody>
+        </table>
+    </body>
+</html>
