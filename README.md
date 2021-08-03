@@ -3,7 +3,7 @@
 
 This is an unofficial PyTorch implementation of ***Jang et al.* (Kakao), [UnivNet](https://arxiv.org/abs/2106.07889)**.
 
-[![arXiv](https://img.shields.io/badge/arXiv-2106.07889-brightgreen.svg?style=flat-square)](https://arxiv.org/abs/2106.07889)[![githubio](https://img.shields.io/static/v1?message=Audio%20Samples&logo=Github&labelColor=grey&color=blue&logoColor=white&label=%20&style=flat-square)](https://mindslab-ai.github.io/univnet/)![GitHub](https://img.shields.io/github/license/mindslab-ai/univnet)
+[![arXiv](https://img.shields.io/badge/arXiv-2106.07889-brightgreen.svg?style=flat-square)](https://arxiv.org/abs/2106.07889) [![githubio](https://img.shields.io/static/v1?message=Audio%20Samples&logo=Github&labelColor=grey&color=blue&logoColor=white&label=%20&style=flat-square)](https://mindslab-ai.github.io/univnet/) [![License](https://img.shields.io/badge/license-BSD_3_Clause-green)](./LICENSE)
 
 
 
@@ -44,7 +44,7 @@ The implementation needs following dependencies.
 0. Python 3.6
 1. [PyTorch](https://pytorch.org/) 1.6.0
 2. [NumPy](https://numpy.org/) 1.17.4 and [SciPy](https://www.scipy.org/) 1.5.4
-3. Install other dependencies in [requirements.txt](.requirements.txt).
+3. Install other dependencies in [requirements.txt](./requirements.txt).
     ```bash
     pip install -r requirements.txt
     ```
