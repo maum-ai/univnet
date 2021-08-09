@@ -3,15 +3,15 @@
 
 This is an unofficial PyTorch implementation of ***Jang et al.* (Kakao), [UnivNet](https://arxiv.org/abs/2106.07889)**.
 
-[![arXiv](https://img.shields.io/badge/arXiv-2106.07889-brightgreen.svg?style=flat-square)](https://arxiv.org/abs/2106.07889) [![githubio](https://img.shields.io/static/v1?message=Audio%20Samples&logo=Github&labelColor=grey&color=blue&logoColor=white&label=%20&style=flat-square)](https://mindslab-ai.github.io/univnet/) [![License](https://img.shields.io/badge/license-BSD_3_Clause-green)](./LICENSE)
+Audio samples are uploaded!
 
-
+[![arXiv](https://img.shields.io/badge/arXiv-2106.07889-brightgreen.svg?style=flat-square)](https://arxiv.org/abs/2106.07889) [![githubio](https://img.shields.io/static/v1?message=Audio%20Samples&logo=Github&labelColor=grey&color=blue&logoColor=white&label=%20&style=flat-square)](https://mindslab-ai.github.io/univnet/) ![GitHub](https://img.shields.io/github/license/mindslab-ai/univnet?style=flat-square)
 
 ## To-Do List
 
-- [ ] Release checkpoint of pre-trained model
-- [ ] Extract wav samples for audio sample page
-- [ ] Add results including validation loss graph
+- [x] Release pre-trained model
+- [x] Extract audio samples for audio sample page
+- [x] Add results including validation loss graph
 
 
 ## Key Features
@@ -127,22 +127,14 @@ python inference.py -p CHECKPOINT_PATH -i INPUT_MEL_PATH
 
 ## Pre-trained Model
 
-A pre-trained model will be released soon.
+You can download checkpoint of pre-trained model from **[Google Drive](https://drive.google.com/file/d/1pZV5q59FfIV4sUp9JobXAUjK4-Y-x2q_/view?usp=sharing)**.
 The model was trained on LibriTTS train-clean-360 split.
 
 ## Results
 
 See audio samples at https://mindslab-ai.github.io/univnet/
 
-
-
-**Comparison with the results on paper**
-
-|             Model              |    MOS    | PESQ(↑) | RMSE(↓) |
-| :----------------------------: | :-------: | :-----: | :-----: |
-|           Recordings           | 4.16±0.09 |  4.50   |  0.000  |
-| Results in Paper (UnivNet-c32) | 3.93±0.09 |  3.70   |  0.316  |
-|     **Ours (UnivNet-c32)**     |     -     | **TBD** | **TBD** |
+<img src="docs/loss.png" width="100%">
 
 ## Note
 

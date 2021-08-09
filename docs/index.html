@@ -1,12 +1,12 @@
 <!DOCTYPE html>
 <html lang="en-US">
     <style>
-        table { 
+        table {
             border-collapse:collapse;
             table-layout:fixed;
             word-break:break-all; 
-        }  
-        th, td { 
+        }
+        th, td {
 			border:0.5px solid grey;
 		}
     </style>
@@ -21,12 +21,12 @@
         <div><p><b>GitHub repository:</b> <a href="https://github.com/mindslab-ai/univnet">mindslab-ai/univnet</a>
 			<iframe src="https://ghbtns.com/github-btn.html?user=mindslab-ai&repo=univnet&type=star&count=true" frameborder="0" scrolling="0" width="150" height="20" title="GitHub"></iframe>
 		</p></div>
-        <p>Please check github repository for implementation details and checkpoint of pre-trained model.</p>
-		<p>Audio samples of our models will be uploaded after their trainings are finished.</p>
+        <p>Please check the Github repository for the implementation details and the pre-trained model checkpoint.</p>
+        <p>The ground truth audio samples from the official demo page have a different volume from the original dataset. We believe the official ground truth audio samples have been post-processed. Therefore, the audio volume of our samples might have a different volume from the official version.</p>
         <br>
         <h3>Synthesis for seen speakers</h3>
-        <li><b>LibriTTS/train-clean-360 dataset</b> is used to train and evaluate model.</li>
-        <li>Former five samples are same with sample in official demo page, later one sample is newly added.</li>
+        <li><b>LibriTTS/train-clean-360 dataset</b> was used to both train and evaluate the model.</li>
+        <li>The first five texts are taken directly from the official demo page for comparison.</li>
         <br>
         <table>
 			<colgroup>
@@ -40,17 +40,13 @@
             </colgroup>
             <thead>
                 <tr>
-                    <th rowspan="2">Text</th>
-                    <th colspan="5">Compared with official demo sample</th>
-                    <th colspan="1">Newly added</th>
-                </tr>
-                <tr>
+					<th>Text</th>
                     <td><p style="color:grey;"><i>Nobody could touch the body until the coroner came.</i></p></td>
                     <td><p style="color:grey;"><i>Then they came to another grove of trees, where all the leaves were of gold; and afterwards to a third, where the leaves were all glittering diamonds.</i></p></td>
                     <td><p style="color:grey;"><i>The shaven face of the priest is a further item to the same effect.</i></p></td>
                     <td><p style="color:grey;"><i>The lady who had spoken English approached the table as if looking for something, and when Beaton looked again, the portrait had been turned on its face.</i></p></td>
                     <td><p style="color:grey;"><i>He shouted, 'Where art thou, ring?' And the ring said, 'I am here,' though it was on the bed of the ocean.</i></p></td>
-                    <td><p style="color:grey;"><i>TBD</i></p></td>
+                    <td><p style="color:grey;"><i>The monarch, after making some inquiry into the rank and character of his rival, despatched the informer with a present of a pair of purple slippers, to complete the magnificence of his Imperial habit.</i></p></td>
                 </tr>
             </thead>
             <tbody>
@@ -61,7 +57,7 @@
                     <td><div align="center"><audio controls="" style="width: 250px;"><source src="samples/seen/ground_truth/3537_5704_000008_000005.wav" type="audio/wav"></audio></div></td>
                     <td><div align="center"><audio controls="" style="width: 250px;"><source src="samples/seen/ground_truth/5319_84357_000005_000004.wav" type="audio/wav"></audio></div></td>
                     <td><div align="center"><audio controls="" style="width: 250px;"><source src="samples/seen/ground_truth/6294_86679_000035_000004.wav" type="audio/wav"></audio></div></td>
-                    <td><div align="center"><audio controls="" style="width: 250px;"><source src="samples/seen/ground_truth/0.wav" type="audio/wav"></audio></div></td>
+                    <td><div align="center"><audio controls="" style="width: 250px;"><source src="samples/seen/ground_truth/949_134657_000002_000005.wav" type="audio/wav"></audio></div></td>
                 </tr>
                 <tr>
                     <td nowrap>Official UnivNet-c16</td>
@@ -82,21 +78,21 @@
                     <td><div align="center">-</div></td>
                 </tr>
                 <tr>
-                    <td nowrap><b>Our UnivNet-c32 (TBD)</b></td>
+                    <td nowrap><b>Our UnivNet-c32</b></td>
                     <td><div align="center"><audio controls="" style="width: 250px;"><source src="samples/seen/c32/2004_147967_000029_000002.wav" type="audio/wav"></audio></div></td>
                     <td><div align="center"><audio controls="" style="width: 250px;"><source src="samples/seen/c32/337_126286_000008_000000.wav" type="audio/wav"></audio></div></td>
                     <td><div align="center"><audio controls="" style="width: 250px;"><source src="samples/seen/c32/3537_5704_000008_000005.wav" type="audio/wav"></audio></div></td>
                     <td><div align="center"><audio controls="" style="width: 250px;"><source src="samples/seen/c32/5319_84357_000005_000004.wav" type="audio/wav"></audio></div></td>
                     <td><div align="center"><audio controls="" style="width: 250px;"><source src="samples/seen/c32/6294_86679_000035_000004.wav" type="audio/wav"></audio></div></td>
-                    <td><div align="center"><audio controls="" style="width: 250px;"><source src="samples/seen/c32/0.wav" type="audio/wav"></audio></div></td>
+                    <td><div align="center"><audio controls="" style="width: 250px;"><source src="samples/seen/c32/949_134657_000002_000005.wav" type="audio/wav"></audio></div></td>
                 </tr>
             </tbody>
         </table>
         <br>
         
         <h3>Synthesis for unseen speakers</h3>
-        <li><b>LibriTTS/test-clean dataset</b> is used to evaluate model, not for training.</li>
-        <li>Former five samples are same with sample in official demo page, later one sample is newly added.</li>
+        <li><b>LibriTTS/test-clean dataset</b> was used to evaluate the model.</li>
+        <li>The first five texts are taken directly from the official demo page for comparison.</li>
         <br>
         <table>
 			<colgroup>
@@ -110,17 +106,13 @@
             </colgroup>
             <thead>
                 <tr>
-                    <th rowspan="2">Text</th>
-                    <th colspan="5">Compared with official demo sample</th>
-                    <th colspan="1">Newly added</th>
-                </tr>
-                <tr>
+                    <th>Text</th>
                     <td><p style="color:grey;"><i>The stars began to crumble and a cloud of fine stardust fell through space.</i></p></td>
                     <td><p style="color:grey;"><i>On August 27, 1837, she writes:--</i></p></td>
                     <td><p style="color:grey;"><i>But when his big brother heard that he had refused to give his cap for a King's golden crown, he said that Anders was a stupid.</i></p></td>
                     <td><p style="color:grey;"><i>The only thing is, I don't know anything about technique and stagecraft and the three unities and that sort of rot.</i></p></td>
                     <td><p style="color:grey;"><i>The marquis of Worcester, a man past eighty-four, was the last in England that submitted to the authority of the parliament.</i></p></td>
-                    <td><p style="color:grey;"><i>TBD</i></p></td>
+                    <td><p style="color:grey;"><i>True history being a mixture of all things, the true historian mingles in everything.</i></p></td>
                 </tr>
             </thead>
             <tbody>
@@ -131,7 +123,7 @@
                     <td><div align="center"><audio controls="" style="width: 250px;"><source src="samples/unseen/ground_truth/7021_85628_000037_000000.wav" type="audio/wav"></audio></div></td>
                     <td><div align="center"><audio controls="" style="width: 250px;"><source src="samples/unseen/ground_truth/7176_92135_000006_000005.wav" type="audio/wav"></audio></div></td>
                     <td><div align="center"><audio controls="" style="width: 250px;"><source src="samples/unseen/ground_truth/8224_274384_000016_000000.wav" type="audio/wav"></audio></div></td>
-                    <td><div align="center"><audio controls="" style="width: 250px;"><source src="samples/unseen/ground_truth/0.wav" type="audio/wav"></audio></div></td>
+                    <td><div align="center"><audio controls="" style="width: 250px;"><source src="samples/unseen/ground_truth/4507_16021_000029_000005.wav" type="audio/wav"></audio></div></td>
                 </tr>
                 <tr>
                     <td nowrap>Official UnivNet-c16</td>
@@ -152,13 +144,13 @@
                     <td><div align="center">-</div></td>
                 </tr>
                 <tr>
-                    <td nowrap><b>Our UnivNet-c32 (TBD)</b></td>
+                    <td nowrap><b>Our UnivNet-c32</b></td>
                     <td><div align="center"><audio controls="" style="width: 250px;"><source src="samples/unseen/c32/1089_134686_000007_000005.wav" type="audio/wav"></audio></div></td>
                     <td><div align="center"><audio controls="" style="width: 250px;"><source src="samples/unseen/c32/3575_170457_000037_000002.wav" type="audio/wav"></audio></div></td>
                     <td><div align="center"><audio controls="" style="width: 250px;"><source src="samples/unseen/c32/7021_85628_000037_000000.wav" type="audio/wav"></audio></div></td>
                     <td><div align="center"><audio controls="" style="width: 250px;"><source src="samples/unseen/c32/7176_92135_000006_000005.wav" type="audio/wav"></audio></div></td>
                     <td><div align="center"><audio controls="" style="width: 250px;"><source src="samples/unseen/c32/8224_274384_000016_000000.wav" type="audio/wav"></audio></div></td>
-                    <td><div align="center"><audio controls="" style="width: 250px;"><source src="samples/unseen/c32/0.wav" type="audio/wav"></audio></div></td>
+                    <td><div align="center"><audio controls="" style="width: 250px;"><source src="samples/unseen/c32/4507_16021_000029_000005.wav" type="audio/wav"></audio></div></td>
                 </tr>
             </tbody>
         </table>
