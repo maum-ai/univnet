@@ -8,8 +8,6 @@ from omegaconf import OmegaConf
 
 from model.generator import Generator
 
-MAX_WAV_VALUE = 32768.0
-
 
 def main(args):
     checkpoint = torch.load(args.checkpoint_path)
@@ -20,10 +18,9 @@ def main(args):
 
     model = Generator(hp).cuda()
     saved_state_dict = checkpoint['model_g']
-    current_state_dict = model.state_dict()
     new_state_dict = {}
     
-    for k, v in current_state_dict.items():
+    for k, v in saved_state_dict.items():
         try:
             new_state_dict[k] = saved_state_dict['module.' + k]
         except:
@@ -41,7 +38,12 @@ def main(args):
             audio = model.inference(mel)
             audio = audio.cpu().detach().numpy()
 
-            out_path = melpath.replace('.mel', '_reconstructed_epoch%04d.wav' % checkpoint['epoch'])
+            if args.output_folder is None:  # if output folder is not defined, audio samples are saved in input folder
+                out_path = melpath.replace('.mel', '_reconstructed_epoch%04d.wav' % checkpoint['epoch'])
+            else:
+                basename = os.path.basename(melpath)
+                basename = basename.replace('.mel', '_reconstructed_epoch%04d.wav' % checkpoint['epoch'])
+                out_path = os.path.join(args.output_folder, basename)
             write(out_path, hp.audio.sampling_rate, audio)
 
 
@@ -53,6 +55,8 @@ if __name__ == '__main__':
                         help="path of checkpoint pt file for evaluation")
     parser.add_argument('-i', '--input_folder', type=str, required=True,
                         help="directory of mel-spectrograms to invert into raw audio.")
+    parser.add_argument('-o', '--output_folder', type=str, default=None,
+                        help="directory which generated raw audio is saved.")
     args = parser.parse_args()
 
     main(args)
