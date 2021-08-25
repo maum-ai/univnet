@@ -27,8 +27,6 @@ if __name__ == '__main__':
 
     assert hp.audio.hop_length == 256, \
         'hp.audio.hop_length must be equal to 256, got %d' % hp.audio.hop_length
-    assert hp.data.train != '' and hp.data.validation != '', \
-        'hp.data.train and hp.data.validation can\'t be empty: please fix %s' % args.config
 
     args.num_gpus = 0
     torch.manual_seed(hp.train.seed)
@@ -40,7 +38,6 @@ if __name__ == '__main__':
         pass
 
     if args.num_gpus > 1:
-        print(args.num_gpus)
         mp.spawn(train, nprocs=args.num_gpus,
                  args=(args, args.checkpoint_path, hp, hp_str,))
     else:
