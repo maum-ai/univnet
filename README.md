@@ -129,18 +129,13 @@ python inference.py -p CHECKPOINT_PATH -i INPUT_MEL_PATH
 
 You can download checkpoint of pre-trained model from **[Google Drive](https://drive.google.com/file/d/1pZV5q59FfIV4sUp9JobXAUjK4-Y-x2q_/view?usp=sharing)**.
 The model was trained on LibriTTS train-clean-360 split.
+> please use `config/legacy.yaml` to load the pre-trained model. for new version, we have fixed the problem of mismatched params.
 
 ## Results
 
 See audio samples at https://mindslab-ai.github.io/univnet/
 
 <img src="docs/loss.png" width="100%">
-
-## Note
-
-This code is an unofficial implementation, there may be some differences from the original paper.
-
-- Our UnivNet generator has smaller number of parameters (c32: 5.11M, c16: 1.42M) than the paper (c32: 14.89M, c16: 4.00M). So far, we have not encountered any issues from using a smaller model size. If run into any problem, please report it as an issue.
 
 ## Implementation Authors
 
