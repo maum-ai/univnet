@@ -107,7 +107,7 @@ class LVCBlock(torch.nn.Module):
             conv_kernel_size=3,
             cond_hop_length=256,
             kpnet_hidden_channels=64,
-            kpnet_conv_size=1,
+            kpnet_conv_size=3,
             kpnet_dropout=0.0,
         ):
         super().__init__()

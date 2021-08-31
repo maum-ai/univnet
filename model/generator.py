@@ -14,6 +14,7 @@ class Generator(nn.Module):
         self.noise_dim = hp.gen.noise_dim
         self.hop_length = hp.audio.hop_length
         channel_size = hp.gen.channel_size
+        kpnet_conv_size = hp.gen.kpnet_conv_size
 
         self.res_stack = nn.ModuleList()
         hop_length = 1
@@ -26,7 +27,8 @@ class Generator(nn.Module):
                     stride=stride,
                     dilations=hp.gen.dilations,
                     lReLU_slope=hp.gen.lReLU_slope,
-                    cond_hop_length=hop_length
+                    cond_hop_length=hop_length,
+                    kpnet_conv_size=kpnet_conv_size
                 )
             )
         
