@@ -142,7 +142,7 @@ Implementation authors are:
 
 Contributors are:
 
-- [Kuan Chen](Kuan Chen)
+- [Kuan Chen](https://github.com/azraelkuan)
 
 Special thanks to
 
