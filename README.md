@@ -7,12 +7,10 @@ Audio samples are uploaded!
 
 [![arXiv](https://img.shields.io/badge/arXiv-2106.07889-brightgreen.svg?style=flat-square)](https://arxiv.org/abs/2106.07889) [![githubio](https://img.shields.io/static/v1?message=Audio%20Samples&logo=Github&labelColor=grey&color=blue&logoColor=white&label=%20&style=flat-square)](https://mindslab-ai.github.io/univnet/) ![GitHub](https://img.shields.io/github/license/mindslab-ai/univnet?style=flat-square)
 
-## To-Do List
+## Notes
 
-- [x] Release pre-trained model
-- [x] Extract audio samples for audio sample page
-- [x] Add results including validation loss graph
-
+**There was a model fix related to parameter size mismatch.**
+**The currently uploaded result and pre-trained weight are from the models before modification, and we plan to update the results and pre-trained model by retraining the modificated model.**
 
 ## Key Features
 
@@ -59,8 +57,6 @@ The implementation needs following dependencies.
 - If you want to use wav files with a different sampling rate, please edit the configuration file (see below).
 
 Note: The mel-spectrograms calculated from audio file will be saved as `**.mel` at first, and then loaded from disk afterwards.
-
-
 
 **Preparing Metadata**
 
@@ -127,7 +123,7 @@ python inference.py -p CHECKPOINT_PATH -i INPUT_MEL_PATH
 
 ## Pre-trained Model
 
-You can download checkpoint of pre-trained model from **[Google Drive](https://drive.google.com/file/d/1pZV5q59FfIV4sUp9JobXAUjK4-Y-x2q_/view?usp=sharing)**.
+You can download checkpoint of pre-trained model from **[Google Drive](https://drive.google.com/file/d/1fRQwLZbcANBgME1gfZdrV08L5IEHNoYp/view?usp=sharing)**.
 The model was trained on LibriTTS train-clean-360 split.
 > please use `config/legacy.yaml` to load the pre-trained model. for new version, we have fixed the problem of mismatched params.
 
@@ -144,7 +140,9 @@ Implementation authors are:
 - [Kang-wook Kim](http://github.com/wookladin) @ [MINDsLab Inc.](https://maum.ai/) (<a href="mailto:full324@snu.ac.kr">full324@snu.ac.kr</a>, <a href="mailto:kwkim@mindslab.ai">kwkim@mindslab.ai</a>)
 - [Wonbin Jung](https://github.com/Wonbin-Jung) @ [MINDsLab Inc.](https://maum.ai/) (<a href="mailto:santabin@kaist.ac.kr">santabin@kaist.ac.kr</a>, <a href="mailto:wbjung@mindslab.ai">wbjung@mindslab.ai</a>)
 
+Contributors are:
 
+- [Kuan Chen](Kuan Chen)
 
 Special thanks to
 
