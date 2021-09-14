@@ -138,8 +138,8 @@ We evaluated our model with data of seen speakers in training data.
 | Model                | PESQ(↑)  | RMSE(↓)   |
 | -------------------- | -------- | --------- |
 | HiFi-GAN v1          | 3.54     | 0.423     |
-| Official UnivNet-c16 | 3.54     | 0.337     |
-| Official UnivNet-c32 | 3.59     | 0.316     |
+| Official UnivNet-c16 | 3.59     | 0.337     |
+| Official UnivNet-c32 | 3.70     | 0.316     |
 | **Our UnivNet-c16**  | **3.60** | **0.317** |
 | **Our UnivNet-c32**  | **TBD**  | **TBD**   |
 
