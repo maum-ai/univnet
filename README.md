@@ -9,8 +9,9 @@ Audio samples are uploaded!
 
 ## Notes
 
-**There was a model fix related to parameter size mismatch.**
-**The currently uploaded result and pre-trained weight are from the models before modification, and we plan to update the results and pre-trained model by retraining the modificated model.**
+**UnivNet-c16 result and the pre-trained weights are uploaded. We plan to update the result and pre-trained model for UnivNet-c32.**
+
+**For UnivNet-c16, our implementation matches the objective scores (PESQ and RMSE) of the original paper.**
 
 ## Key Features
 
@@ -76,7 +77,7 @@ Since this model is a vocoder, the transcripts are **NOT** used during training.
 
 **Preparing Configuration Files**
 
-- Run `cp config/default.yaml config/config.yaml` and then edit `config.yaml`
+- Run `cp config/default_c32.yaml config/config.yaml` and then edit `config.yaml`
 
 - Write down the root path of train/validation in the `data` section. The data loader parses list of files within the path recursively.
   
@@ -123,13 +124,26 @@ python inference.py -p CHECKPOINT_PATH -i INPUT_MEL_PATH
 
 ## Pre-trained Model
 
-You can download checkpoint of pre-trained model from **[Google Drive](https://drive.google.com/file/d/1fRQwLZbcANBgME1gfZdrV08L5IEHNoYp/view?usp=sharing)**.
-The model was trained on LibriTTS train-clean-360 split.
-> please use `config/legacy.yaml` to load the pre-trained model. for new version, we have fixed the problem of mismatched params.
+You can download the pre-trained models from the Google Drive link below. The models were trained on LibriTTS train-clean-360 split.
+- **UnivNet-c16: [Google Drive](https://drive.google.com/file/d/1Iqw9T0rRklLsg-6aayNk6NlsLVHfuftv/view?usp=sharing)**
+- **UnivNet-c32: TBD**
+> please use `config/default_c16.yaml` to load the UnivNet-c16 pre-trained model.
 
 ## Results
 
 See audio samples at https://mindslab-ai.github.io/univnet/
+
+We evaluated our model with data of seen speakers in training data.
+
+| Model                | PESQ(↑)  | RMSE(↓)   |
+| -------------------- | -------- | --------- |
+| HiFi-GAN v1          | 3.54     | 0.423     |
+| Official UnivNet-c16 | 3.54     | 0.337     |
+| Official UnivNet-c32 | 3.59     | 0.316     |
+| **Our UnivNet-c16**  | **3.60** | **0.317** |
+| **Our UnivNet-c32**  | **TBD**  | **TBD**   |
+
+The loss graphs of UnivNet-c16 is listed below.
 
 <img src="docs/loss.png" width="100%">
 
