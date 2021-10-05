@@ -5,13 +5,13 @@ This is an unofficial PyTorch implementation of ***Jang et al.* (Kakao), [UnivNe
 
 Audio samples are uploaded!
 
-[![arXiv](https://img.shields.io/badge/arXiv-2106.07889-brightgreen.svg?style=flat-square)](https://arxiv.org/abs/2106.07889) [![githubio](https://img.shields.io/static/v1?message=Audio%20Samples&logo=Github&labelColor=grey&color=blue&logoColor=white&label=%20&style=flat-square)](https://mindslab-ai.github.io/univnet/) ![GitHub](https://img.shields.io/github/license/mindslab-ai/univnet?style=flat-square)
+[![arXiv](https://img.shields.io/badge/arXiv-2106.07889-brightgreen.svg?style=flat-square)](https://arxiv.org/abs/2106.07889) [![githubio](https://img.shields.io/static/v1?message=Audio%20Samples&logo=Github&labelColor=grey&color=blue&logoColor=white&label=%20&style=flat-square)](https://mindslab-ai.github.io/univnet/) [![GitHub](https://img.shields.io/github/license/mindslab-ai/univnet?style=flat-square)](./LICENSE)
 
 ## Notes
 
-**UnivNet-c16 result and the pre-trained weights are uploaded. We plan to update the result and pre-trained model for UnivNet-c32.**
+**Both UnivNet-c16 and c32 results and the pre-trained weights have been uploaded.**
 
-**For UnivNet-c16, our implementation matches the objective scores (PESQ and RMSE) of the original paper.**
+**For both models, our implementation matches the objective scores (PESQ and RMSE) of the original paper.**
 
 ## Key Features
 
@@ -119,31 +119,32 @@ If you are running tensorboard on a remote machine, you can open the tensorboard
 ## Inference
 
 ```bash
-python inference.py -p CHECKPOINT_PATH -i INPUT_MEL_PATH
+python inference.py -p CHECKPOINT_PATH -i INPUT_MEL_PATH -o OUTPUT_WAV_PATH
 ```
 
 ## Pre-trained Model
 
 You can download the pre-trained models from the Google Drive link below. The models were trained on LibriTTS train-clean-360 split.
 - **UnivNet-c16: [Google Drive](https://drive.google.com/file/d/1Iqw9T0rRklLsg-6aayNk6NlsLVHfuftv/view?usp=sharing)**
-- **UnivNet-c32: TBD**
-> please use `config/default_c16.yaml` to load the UnivNet-c16 pre-trained model.
+- **UnivNet-c32: [Google Drive](https://drive.google.com/file/d/1QZFprpvYEhLWCDF90gSl6Dpn0gonS_Rv/view?usp=sharing)**
 
 ## Results
 
 See audio samples at https://mindslab-ai.github.io/univnet/
 
-We evaluated our model with data of seen speakers in training data.
+We evaluated our model with validation set.
 
-| Model                | PESQ(↑)  | RMSE(↓)   |
-| -------------------- | -------- | --------- |
-| HiFi-GAN v1          | 3.54     | 0.423     |
-| Official UnivNet-c16 | 3.59     | 0.337     |
-| Official UnivNet-c32 | 3.70     | 0.316     |
-| **Our UnivNet-c16**  | **3.60** | **0.317** |
-| **Our UnivNet-c32**  | **TBD**  | **TBD**   |
+| Model                | PESQ(↑)   | RMSE(↓)   | Model Size |
+| -------------------- | --------- | --------- | ---------- |
+| HiFi-GAN v1          | 3.54      | 0.423     | 14.01M     |
+| Official UnivNet-c16 | 3.54      | 0.337     | 4.00M      |
+| Official UnivNet-c32 | 3.59      | 0.316     | 14.86M     |
+| **Our UnivNet-c16**  | **3.60**  | **0.317** | **4.00M**  |
+| **Our UnivNet-c32**  | **3.68**  | **0.304** | **14.87M** |
 
-The loss graphs of UnivNet-c16 is listed below.
+The loss graphs of UnivNet are listed below.
+
+The orange and blue graphs indicate c16 and c32, respectively.
 
 <img src="docs/loss.png" width="100%">
 
