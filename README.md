@@ -137,9 +137,9 @@ We evaluated our model with validation set.
 | Model                | PESQ(↑)   | RMSE(↓)   | Model Size |
 | -------------------- | --------- | --------- | ---------- |
 | HiFi-GAN v1          | 3.54      | 0.423     | 14.01M     |
-| Official UnivNet-c16 | 3.54      | 0.337     | 4.00M      |
-| Official UnivNet-c32 | 3.59      | 0.316     | 14.86M     |
+| Official UnivNet-c16 | 3.59      | 0.337     | 4.00M      |
 | **Our UnivNet-c16**  | **3.60**  | **0.317** | **4.00M**  |
+| Official UnivNet-c32 | 3.70      | 0.316     | 14.86M     |
 | **Our UnivNet-c32**  | **3.68**  | **0.304** | **14.87M** |
 
 The loss graphs of UnivNet are listed below.
